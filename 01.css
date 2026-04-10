@@ -1,0 +1,105 @@
+:root {
+  --bg-main: #121816;
+  --bg-surface: #1a2320;
+  --bg-soft: #202b26;
+  --text-main: #c9d3cd;
+  --text-muted: #9dada4;
+  --accent: #2f4b3d;
+  --accent-hover: #3b5f4d;
+  --border: #2f3d37;
+  --shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-main);
+  background:
+    radial-gradient(circle at 0% 0%, #1e2a25 0%, transparent 38%),
+    radial-gradient(circle at 100% 100%, #18231f 0%, transparent 35%),
+    var(--bg-main);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 980px;
+  margin: 48px auto;
+  padding: 0 20px 28px;
+}
+
+.loadUsers {
+  appearance: none;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #cfd9d3;
+  border-radius: 10px;
+  padding: 11px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  transition:
+    background-color 0.22s ease,
+    transform 0.15s ease,
+    opacity 0.2s ease;
+}
+
+.loadUsers:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.loadUsers:active {
+  transform: translateY(0);
+}
+
+.loadUsers:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.users {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+.userBlock {
+  background: linear-gradient(180deg, var(--bg-surface) 0%, #151e1b 100%);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 16px;
+  box-shadow: var(--shadow);
+}
+
+.strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 17px;
+  color: #d2dbd6;
+}
+
+.userBlock p {
+  margin: 6px 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  background: var(--bg-soft);
+  border-radius: 8px;
+  padding: 6px 8px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    margin-top: 28px;
+    padding: 0 14px 20px;
+  }
+
+  .loadUsers {
+    width: 100%;
+  }
+}

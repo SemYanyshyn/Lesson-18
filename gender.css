@@ -1,0 +1,26 @@
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(
+    circle at 20% 20%,
+    #1b2433 0%,
+    #111827 45%,
+    #0b1220 100%
+  );
+}
+
+.gender-card {
+  background-color: #161f2f;
+}
+
+#name-input::placeholder {
+  color: #9ba5b5;
+}
+
+.result-area {
+  background-color: #101726;
+}

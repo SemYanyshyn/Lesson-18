@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="gender.css" />
+  </head>
+  <body class="text-light">
+    <main
+      class="container min-vh-100 d-flex align-items-center justify-content-center py-5"
+    >
+      <section
+        class="card gender-card shadow-lg border border-secondary-subtle rounded-4 w-100"
+        style="max-width: 520px"
+      >
+        <div class="card-body p-4 p-md-5">
+          <h1 class="h4 mb-4 text-center text-white">Check gender by name</h1>
+
+          <form id="gender-form" class="d-grid gap-3">
+            <div>
+              <label for="name-input" class="form-label text-light">Name</label>
+              <input
+                type="text"
+                class="form-control form-control-lg bg-dark border-secondary text-light"
+                id="name-input"
+                name="name"
+                placeholder="Enter a name"
+                autocomplete="name"
+                required
+              />
+            </div>
+
+            <button
+              type="submit"
+              id="btnSearch"
+              class="btn btn-info btn-lg fw-semibold"
+            >
+              Search
+            </button>
+          </form>
+
+          <div
+            id="result"
+            class="result-area mt-4 p-3 rounded-3 border border-secondary bg-dark text-light"
+          >
+            Result will appear here.
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="gender.js" defer></script>
+  </body>
+</html>
